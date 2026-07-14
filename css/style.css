@@ -34,22 +34,48 @@ body{
 
 /* ========= Header ========= */
 
+/*==========================
+        HEADER
+===========================*/
+
 .header{
 
-    background:#ffffff;
+    position:absolute;
 
-    padding:18px 0;
+    top:0;
+    left:0;
 
-    border-bottom:1px solid #ececec;
+    width:100%;
+
+    z-index:999;
+
+    padding:20px 0;
+
+}
+
+.header .container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
 
 }
 
 .logo{
 
-    font-size:28px;
+    display:inline-flex;
 
-    font-weight:700;
+    align-items:center;
 
+}
+
+.logo img{
+    width:220px;
+    height:auto;
+    border-radius: 10px;
+    display:block;
 }
 
 /* ========= Common Sections ========= */
@@ -340,6 +366,166 @@ section{
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+added right side content on hero section */
+
+.hero-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1.3fr .9fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.hero-process{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:18px;
+
+    padding:35px;
+
+}
+
+.hero-process h3{
+
+    color:#fff;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:28px;
+
+}
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.process-card{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.process-card:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.14);
+
+}
+
+.process-icon{
+
+    width:60px;
+
+    height:60px;
+
+    margin:0 auto 15px;
+
+    border-radius:50%;
+
+    background:#F97316;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+}
+
+.process-card h4{
+
+    color:#fff;
+
+    margin-bottom:10px;
+
+}
+
+.process-card p{
+
+    color:rgba(255,255,255,.85);
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    margin:0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===========================
    TABLET
 =========================== */
@@ -364,6 +550,21 @@ section{
 
 }
 
+
+
+
+.hero-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero-process{
+
+    display:none;
+
+}
+
 }
 
 
@@ -372,6 +573,14 @@ section{
 =========================== */
 
 @media(max-width:768px){
+
+ .header{
+        padding:15px 0;
+    }
+
+.logo img{
+        width:170px;
+    }    
 
 .hero{
 
@@ -382,7 +591,7 @@ section{
 }
 
 .hero-content{
-
+    padding-top: 20px;
     text-align:center;
 
 }
